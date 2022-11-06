@@ -1,0 +1,68 @@
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  /* background-color: rgb(18, 18, 36);
+  background-color: rgb(231, 185, 1); */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: rgb(231, 185, 1);
+}
+
+#app {
+  font-size: 2.3rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  height: 100vh;
+  max-width: 1800px;
+  width: 100vw;
+
+  /* background-color: rgb(18, 18, 36); */
+  /* background-color: rgb(231, 185, 1); */
+
+  display: grid;
+  grid-template-columns: 1fr 350px 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "score-container score-container score-container"
+    "left-container middle-container right-container";
+  gap: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  #app {
+    font-size: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr;
+    grid-template-areas:
+      "score-container"
+      "middle-container"
+      "left-container"
+      "right-container";
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #app {
+    font-size: 1.2rem;
+  }
+}
+
+/* #app {
+  position: relative;
+  height: 100vh;
+  background-color: #333844;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
